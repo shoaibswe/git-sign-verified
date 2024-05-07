@@ -59,12 +59,23 @@ chmod 600 ~/.gnupg/*
 chmod 700 ~/.gnupg
 ```
 
-NB: Feshly installed brew
+Notes: 
+
+Feshly installed brew
 Some tools may be hardcoded to look only in one location, make a symlink:
 
 ```sudo ln -s /opt/homebrew/bin/gpg /usr/local/bin```
 
+
+
+Sometimes, GPG needs to know the tty device to prompt for the passphrase. Ensure the environment variable GPG_TTY is set correctly in your shell's profile (like .bashrc or .bash_profile):
+```export GPG_TTY=$(tty)```
+
+After adding this to your profile, source the file:
+```source ~/.bashrc```
+
+
 @shoaibswe
 
 
-<sub>  ref hackmd </sub>
+<sub>  ref hackmd & github</sub>
